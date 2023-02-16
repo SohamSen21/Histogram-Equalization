@@ -13,7 +13,7 @@ imgGray = cv.cvtColor(img, cv.COLOR_BGR2YUV)
 
 imgGray[:,:, 0] = cv.equalizeHist(imgGray[:,:, 0])
 hist_eq = cv.cvtColor(imgGray, cv.COLOR_YUV2BGR)
-cv.imwrite('gray_scale.jpg',imgGray)
+cv.imwrite('Hist_Equal.jpg',hist_eq)
 
 cv.imshow("equalizeHist", np.hstack((img, hist_eq)))
 cv.waitKey(0)
